@@ -1237,17 +1237,5 @@ services:
 ```
 
 # Acknowledgments
-First of all, a massive thank you to all the users of this plugin, seeing so many positive responses to my work keeps me going and improving!
 
-A couple of people helped me test this piece of software, by opening issues, pointing me into new and interesting directions and showing me ways to improve this plugin. A couple of them are very persistent and I want to thank you guys:
-* Pieter Janssens (@piejanssens) for his [kind words on the openHAB community forum](https://community.openhab.org/t/homekit-holy-grail-homebridge-openhab2-complete/66167)
-* Grzegorz (@grzegorz914) for providing quick feedback and opening a couple of helpful PR's
-* @EjvindHald for at least the same amount of feedback
-* @D-J-See and @DanielKnoop for adding OH3 support, way before I was thinking about migrating to the new version.
-* @florian-h05 for cleaning up my docs and adding HTTP(S) basic auth support
-* Honorable mentions for finding my bugs and opening great, helpful and responsive issues:
-  * @hartmood
-  * @maisun
-  * @apfelflo89
-  * @CHTHSCH
-  * @Matsuo3rd
+This project is based on [homebridge-openhab2-complete](https://github.com/steilerDev/homebridge-openhab2-complete) by [Frank Steiler](https://github.com/steilerDev).
