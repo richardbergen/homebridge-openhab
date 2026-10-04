@@ -1,29 +1,21 @@
-# Homebridge2 Plugin for OpenHAB3
+# homebridge-openhab
 
-[![NPM](https://nodei.co/npm/homebridge-openhab2-complete.png)](https://nodei.co/npm/homebridge-openhab2-complete/)
+This [Homebridge](https://github.com/homebridge/homebridge) plugin connects [openHAB](https://www.openhab.org) items to Apple HomeKit. It supports the HomeKit services that can be represented with openHAB item types (32 accessory types are listed [below](#supported-hap-services)). Accessories are declared in the Homebridge configuration. The plugin does not use openHAB's item tags or sitemap.
 
-This [homebridge](https://github.com/nfarina/homebridge) plugin for [openHAB](https://www.openhab.org) fully supports all services offered by Apple's HomeKit Accessory Protocol (HAP), as far as it is feasible based on the item types offered by OpenHAB (see [below](#supported-hap-services) for the currently supported 32 accessories). In opposite to the existing [openHAB homebridge plugin](https://www.npmjs.com/package/homebridge-openhab2) or the native [openHAB Homekit Plugin](https://www.openhab.org/addons/integrations/homekit/), this plugin requires explicit declaration of accessories in the homebridge configuration and does not use openHAB's tagging system, which leads to a little more effort during configuration, but proves more reliable and functional in more complex installations. See [Comparisson](#comparison) below.
+## Compatibility
 
-## Preface
-~~Since the native HomeKit integration of OpenHAB has significantly improved (still lacking some of the available Service of this plugin), I don't think there is much value in this plugin.~~
+Tested with Homebridge 2.4.0 on Node.js 24 and openHAB 5.2.1. `engines` declares Homebridge `^1.8.0 || ^2.0.0` and Node.js 18, 20, 22, or 24.
 
-After testing openHAB3's HomeKit integration for a week, I decided to move back to homebridge, due to the instability of openHAB's implementation.
+The plugin uses the openHAB REST API and the server-sent events feed. Those are the same interfaces in openHAB 3, 4, and 5. This fork has not had a separate openHAB 4 test pass, but the same calls succeeded against openHAB 5.2.1. A future openHAB release is untested until its REST item and event API is checked.
 
-As part of my OpenHAB 3 migration I  updated the code to support OH3, finally put some bug fixes that happened over the last year into the release and replaced the depricated `request` package. 
-
-To pull the Github version:
-```
-npm install -g -f steilerDev/homebridge-openhab2-complete#master
-```
+The platform name in `config.json` is still `openHAB2-Complete`. Existing configurations do not need to change.
 
 ## Installation
-*Note: Please install [homebridge](https://www.npmjs.com/package/homebridge) first.*
 
-```
-npm install -g homebridge-openhab2-complete
-```
+Install [Homebridge](https://www.npmjs.com/package/homebridge) first. This plugin is not published on npm. Install it from GitHub:
 
-Some people are experiencing dependency issues between homebridge's node version and the required node version for this project. My local setup is based on [oznu's homebridge docker container](https://github.com/oznu/docker-homebridge), where I never ran into any problems. In order to install the plugin in the docker, just add `npm install homebridge-openhab2-complete` to the `startup.sh` script inside the mapped docker volume.
+```bash
+npm install -g richardbergen/homebridge-openhab
 
 ## Configuration
 This is a platform plugin, that will register all accessories within the Bridge provided by homebridge. The following shows the general homebridge configuration (`config.json`), see the [Supported HAP Services below](#supported-hap-services), in order to get the detailed configuration for each service.
@@ -1208,7 +1200,7 @@ Obviously the aim of this project is a full coverage of the HAP specification. D
 
 Due to the very limited documentation on homebridge plugin development I have not implemented a dynamic platform (there is only [this partly complete wiki entry](https://github.com/nfarina/homebridge/wiki/On-Programming-Dynamic-Platforms)). If anyone of you knows how to do it, please contact me directly!
 
-If you have feedback or suggestions how to better represent the services as openHAB Items, feel free to open an [issue](https://github.com/steilerDev/homebridge-openhab2-complete/issues).
+If you have feedback or suggestions how to better represent the services as openHAB Items, feel free to open an [issue](https://github.com/richardbergen/homebridge-openhab/issues).
 
 ### Contribute & Add new service/accessory
 If you would like to contribute just send me a pull request. In order to add a new service you have to modify/add the following parts:
