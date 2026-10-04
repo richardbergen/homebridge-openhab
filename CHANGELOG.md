@@ -1,4 +1,4 @@
-# Changelog of homebridge-openhab2-complete
+# Changelog of homebridge-openhab
 ## Changelog
 
 ### V1.3.6 (unreleased)

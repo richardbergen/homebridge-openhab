@@ -3,7 +3,7 @@ const {sleep} = require('./util/Util');
 
 const version = require('./package').version;
 const pluginName = require('./package').name;
-const platformName = 'openHAB2-Complete';
+const platformName = 'openHAB';
 
 const {OpenHAB} = require('./util/OpenHAB');
 

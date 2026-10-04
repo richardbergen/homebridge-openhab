@@ -18,10 +18,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/steilerDev/homebridge-openhab2-complete"
+    "url": "https://github.com/richardbergen/homebridge-openhab"
   },
   "bugs": {
-    "url": "https://github.com/steilerDev/homebridge-openhab2-complete/issues"
+    "url": "https://github.com/richardbergen/homebridge-openhab/issues"
   },
   "engines": {
     "node": "^18.20.4 || ^20.18.0 || ^22.13.0 || ^24.0.0",

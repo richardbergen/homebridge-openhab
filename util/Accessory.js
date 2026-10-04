@@ -128,7 +128,7 @@ class Accessory {
         return new this.Service.AccessoryInformation()
             .setCharacteristic(this.Characteristic.Name, this.name)
             .setCharacteristic(this.Characteristic.Manufacturer, 'steilerDev')
-            .setCharacteristic(this.Characteristic.Model, `openHAB2 ${modelDescription}`)
+            .setCharacteristic(this.Characteristic.Model, `openHAB ${modelDescription}`)
             .setCharacteristic(this.Characteristic.SerialNumber, this.uuid_base)
             .setCharacteristic(this.Characteristic.FirmwareRevision, this._config.version)
             .setCharacteristic(this.Characteristic.HardwareRevision, this._config.version);

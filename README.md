@@ -8,7 +8,7 @@ Tested with Homebridge 2.4.0 on Node.js 24 and openHAB 5.2.1. `engines` declares
 
 The plugin uses the openHAB REST API and the server-sent events feed. Those are the same interfaces in openHAB 3, 4, and 5. This fork has not had a separate openHAB 4 test pass, but the same calls succeeded against openHAB 5.2.1. A future openHAB release is untested until its REST item and event API is checked.
 
-The platform name in `config.json` is still `openHAB2-Complete`. Existing configurations do not need to change.
+The platform name in `config.json` is still `openHAB`. Existing configurations do not need to change.
 
 ## Installation
 
@@ -32,7 +32,7 @@ This is a platform plugin, that will register all accessories within the Bridge 
 
     "platforms": [
         {
-            "platform": "openHAB2-Complete",
+            "platform": "openHAB",
             "host": "http://192.168.0.100",
             "port": "8080",
             "username": "homebridge",
@@ -50,7 +50,7 @@ This is a platform plugin, that will register all accessories within the Bridge 
     ]
 }
 ```
-* `platform` has to be `"openHAB2-Complete"`
+* `platform` has to be `"openHAB"`
 * `host`: The IP or hostname of your openHAB instance. The Protocol specifier (`http://`) is optional, defaults to `http://` (independent of the specified port)
 * `port`: *(optional)* If not specified the default port of the specified `host` protocol is used
 * `username`: *(optional)* Username for HTTP(S) basic auth
@@ -174,12 +174,12 @@ Since iOS 13 multiple accessories can be grouped within a single accessory. This
         "batteryItemThreshold": "20",
         "items": [
             {
-                "type": "homebridge-openhab2-complete item type",
+                "type": "homebridge-openhab item type",
                 "name": "An items name, as shown in Homekit later",
                 "item": "Itemname-within-OpenHAB"
             }, 
             {
-                "type": "homebridge-openhab2-complete item type",
+                "type": "homebridge-openhab item type",
                 "items": [
                     {
                         "name": "An items name, as shown in Homekit later",
