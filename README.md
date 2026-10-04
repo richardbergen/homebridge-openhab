@@ -1,4 +1,4 @@
-# Homebridge Plugin for OpenHAB3
+# Homebridge2 Plugin for OpenHAB3
 
 [![NPM](https://nodei.co/npm/homebridge-openhab2-complete.png)](https://nodei.co/npm/homebridge-openhab2-complete/)
 
