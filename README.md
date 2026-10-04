@@ -1,4 +1,4 @@
-# Homebridge Plugin for OpenHAB2 - Complete Edition (works also with OpenHAB3!)
+# Homebridge Plugin for OpenHAB3
 
 [![NPM](https://nodei.co/npm/homebridge-openhab2-complete.png)](https://nodei.co/npm/homebridge-openhab2-complete/)
 
